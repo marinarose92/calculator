@@ -4,9 +4,12 @@
   padding:40px;
   border-radius:10px;
   background-image: url('https://i.ibb.co/CW9kp4b/Lola-Floral-final-image.jpg');
+  margin:0 auto;
+  margin-top:50px;
 }
 
 body {
+  background-color:rgb(255, 248, 234);
 }
 
 #screen {
