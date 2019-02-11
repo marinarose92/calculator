@@ -1,0 +1,60 @@
+#container {
+  min-width:412px;
+  width:300px;
+  padding:40px;
+  border-radius:10px;
+  background-image: url('https://i.ibb.co/CW9kp4b/Lola-Floral-final-image.jpg');
+}
+
+body {
+}
+
+#screen {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  height:100px;
+  width:400px;
+  font-size:60px;
+  line-height:100px;
+  vertical-align:middle;
+  margin-bottom:10px;
+  font-family:'Courier New';
+  text-align:right;
+  color:gray;
+  padding-right:10px;
+  word-wrap:break-word;
+  background-color:white;
+}
+.btn, #equals, #decimal, #plus, #minus, #times, #divide {
+  width:100px;
+  height:100px;
+  font-size:40px;
+  border-radius:10px;
+  margin-bottom:5px;
+  background-color:white;
+  color:rgb(88, 88, 88);
+
+}
+.btn-wide {
+  width:204px !important;
+  padding:none;
+  height:100px;
+  font-size:30px;
+  border-radius:10px;
+  margin-bottom:5px;
+  background-color:white;
+  color:rgb(88, 88, 88);
+}
+
+.operator {
+  background-color:rgb(255, 232, 241) !important;
+  width:100px;
+  height:100px;
+  font-size:40px;
+  border-radius:10px;
+  margin-bottom:5px;
+  color:rgb(88, 88, 88);
+}
+
+.backspace {
+};
