@@ -7,7 +7,7 @@
   background-image: url('https://i.ibb.co/CW9kp4b/Lola-Floral-final-image.jpg');
   margin:0 auto;
   margin-top:50px;
-  padding-top:60px;
+  padding-top:40px;
   padding-bottom:20px;
 }
 
@@ -19,7 +19,7 @@ body {
   border: 1px solid lightgray;
   border-radius: 10px;
   height:100px;
-  width:350px;
+  width:340px;
   font-size:60px;
   line-height:100px;
   vertical-align:middle;
