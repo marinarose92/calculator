@@ -1,7 +1,8 @@
 #container {
   min-width:370px;
   width:370px;
-  padding:20px;
+  padding-left:20px;
+  padding-right:5px;
   border-radius:10px;
   background-image: url('https://i.ibb.co/CW9kp4b/Lola-Floral-final-image.jpg');
   margin:0 auto;
@@ -63,6 +64,7 @@ body {
   border-radius:10px;
   margin-bottom:5px;
   color:rgb(88, 88, 88);
+  cursor:pointer;
 }
 
 .backspace {
