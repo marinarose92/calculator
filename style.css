@@ -1,11 +1,13 @@
 #container {
-  min-width:412px;
-  width:412px;
-  padding:40px;
+  min-width:370px;
+  width:370px;
+  padding:20px;
   border-radius:10px;
   background-image: url('https://i.ibb.co/CW9kp4b/Lola-Floral-final-image.jpg');
   margin:0 auto;
   margin-top:50px;
+  padding-top:60px;
+  padding-bottom:20px;
 }
 
 body {
@@ -16,7 +18,7 @@ body {
   border: 1px solid lightgray;
   border-radius: 10px;
   height:100px;
-  width:400px;
+  width:350px;
   font-size:60px;
   line-height:100px;
   vertical-align:middle;
@@ -29,8 +31,10 @@ body {
   background-color:white;
 }
 .btn, #equals, #decimal, #plus, #minus, #times, #divide {
-  width:100px;
-  height:100px;
+  max-width:85px;
+  max-height:85px;
+  width:85px;
+  height:85px;
   font-size:40px;
   border-radius:10px;
   margin-bottom:5px;
@@ -40,9 +44,9 @@ body {
 
 }
 .btn-wide {
-  width:204px !important;
+  width:175px !important;
   padding:none;
-  height:100px;
+  height:85x;
   font-size:30px;
   border-radius:10px;
   margin-bottom:5px;
@@ -53,8 +57,8 @@ body {
 
 .operator {
   background-color:rgb(255, 232, 241) !important;
-  width:100px;
-  height:100px;
+  width:85px;
+  height:85px;
   font-size:40px;
   border-radius:10px;
   margin-bottom:5px;
