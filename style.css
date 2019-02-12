@@ -18,7 +18,7 @@ body {
 #screen {
   border: 1px solid lightgray;
   border-radius: 10px;
-  height:100px;
+  height:101px;
   width:340px;
   font-size:60px;
   line-height:100px;
@@ -28,7 +28,6 @@ body {
   text-align:right;
   color:gray;
   padding-right:10px;
-  word-wrap:break-word;
   background-color:white;
 }
 .btn, #equals, #decimal, #plus, #minus, #times, #divide {

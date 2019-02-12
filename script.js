@@ -53,23 +53,62 @@ function operate(sum) {
 			};
 		};
 	};
-	clearDisplay()
+	clearDisplay();
 };
 
 const button = document.querySelectorAll(".btn");
 const equals = document.getElementById("equals");
 const ac = document.getElementById("ac");
 const decimal = document.getElementById("decimal");
-const plus = document.getElementById("plus");
-const minus = document.getElementById("minus");
-const times = document.getElementById("times");
-const divide = document.getElementById("divide");
 const operator = document.querySelectorAll(".operator");
 const backspace = document.getElementById("backspace");
-const regexList = /[\+\-×÷]/;
-const zero = "Cannot divide by zero.";
+const regexList = /[+\-×÷]/;
+const allowedKeycodes = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 120, 43, 45];
+const numbers = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
+const operatorKeycodes = [120, 43, 45, 47];
+const equalsKeycode = 61;
+var hasOperator = false;
 
-const operators = ["+", "-", "×", "÷"];
+window.addEventListener('keypress', function(e) {
+
+	var keycode = e.which || e.keyCode;
+	var valueEntered = String.fromCharCode(keycode);
+	console.log(keycode);
+
+	if (keycode === 120) {
+		var valueEntered = "×";
+	};
+
+	if (keycode === 47) {
+		var valueEntered = "÷";
+	};
+
+	if (numbers.includes(keycode)) {
+		sum.push(valueEntered);
+		document.getElementById("screen").textContent = sum.join("");
+	};
+    
+	if (operatorKeycodes.includes(keycode)) {
+		if (hasOperator) {
+			operate(sum);
+			const onDisplay = document.getElementById("screen").textContent;
+			sum = [];
+			sum.push(onDisplay, valueEntered);
+		} else {
+			sum.push(valueEntered);
+			document.getElementById("screen").textContent = sum.join("");
+		};
+		var hasOperator = true;
+	};
+        
+	if (keycode === equalsKeycode) {
+		var hasOperator = false;
+		operate(sum);
+		const onDisplay = document.getElementById("screen").textContent;
+		sum = [];
+		sum.push(onDisplay);
+	}
+});
 
 operator.forEach((operator) => {
 	operator.addEventListener("click", (e) => {
@@ -128,14 +167,18 @@ ac.addEventListener("click", (e) => {
 });
 
 backspace.addEventListener("click", () => {
-  sum.pop();
-  document.getElementById("screen").textContent = sum.join("");
+	sum.pop();
+	document.getElementById("screen").textContent = sum.join("");
 });
 
 // add a listener to every button
 button.forEach((button) => {
 	button.addEventListener("click", (e) => {
-		sum.push(e.target.innerText);
-		document.getElementById("screen").textContent = sum.join("");
-	})
-})
+		if (sum.length >= 9) {
+			return;
+		} else {
+			sum.push(e.target.innerText);
+			document.getElementById("screen").textContent = sum.join("");
+		}
+	});
+});
